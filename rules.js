@@ -737,7 +737,7 @@ window.RULES['heading-hierarchy'] = function(parsed) {
     const line = lines[i];
     const lineNum = i + 1;
 
-    if (pagebreakRe.test(line)) continue;
+    if (pagebreakRe.test(line) && !headingRe.test(line)) continue;
 
     if (sectionOpenRe.test(line)) {
       sectionStack.push({ waitingForHeading: true, level: null });
@@ -754,8 +754,9 @@ window.RULES['heading-hierarchy'] = function(parsed) {
 
           let parentLevel = 0;
           for (let p = s - 1; p >= 0; p--) {
-            if (sectionStack[p].level !== null) {
-              parentLevel = sectionStack[p].level;
+            const candidate = sectionStack[p].level || sectionStack[p].lastChildLevel || null;
+            if (candidate !== null) {
+              parentLevel = candidate;
               break;
             }
           }
@@ -786,7 +787,14 @@ window.RULES['heading-hierarchy'] = function(parsed) {
 
     if (sectionCloseRe.test(line)) {
       if (sectionStack.length > 0) {
-        sectionStack.pop();
+        const closed = sectionStack.pop();
+        // Propagate closed section's level to parent so siblings can inherit it
+        if (closed.level !== null && sectionStack.length > 0) {
+          const parent = sectionStack[sectionStack.length - 1];
+          if (parent.lastChildLevel === undefined || closed.level > parent.lastChildLevel) {
+            parent.lastChildLevel = closed.level;
+          }
+        }
       }
     }
   }
