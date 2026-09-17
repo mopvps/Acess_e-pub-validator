@@ -894,6 +894,7 @@ window.RULES['figure-table-after-ref'] = function(parsed) {
   const blocks = parsed.dom.querySelectorAll('p, div, li, td, th, h1, h2, h3, h4, h5, h6, blockquote');
 
   blocks.forEach(el => {
+    if (el.closest('figure')) return;
     const text = el.textContent || '';
     let match;
     refRe.lastIndex = 0;
