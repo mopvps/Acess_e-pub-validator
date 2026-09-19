@@ -1038,6 +1038,201 @@ window.RULES['bibliography-cite-check'] = function(parsed) {
   return issues;
 };
 
+window.RULES['unknown-tag'] = function(parsed) {
+  const issues = [];
+  const lines = parsed.lines;
+
+  const ALLOWED_TAGS = new Set([
+    // Document Setup & Metadata
+    '!doctype','html','head','meta','title','link','body',
+    // Sectioning & Structural
+    'section','aside','div','h1','h2','h3','h4',
+    // Text & Inline
+    'p','span','a','b','i','em','u','sup','sub','cite',
+    // Lists
+    'ul','ol','li',
+    // Media & Figure
+    'figure','img','figcaption',
+    // Table
+    'table','caption','colgroup','col','thead','tbody','tr','th','td'
+  ]);
+
+  const tagRe = /<\/?([a-zA-Z][a-zA-Z0-9]*)[^>]*>/g;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    tagRe.lastIndex = 0;
+    let match;
+    while ((match = tagRe.exec(line)) !== null) {
+      const tag = match[1].toLowerCase();
+      if (ALLOWED_TAGS.has(tag)) continue;
+      issues.push({
+        ruleId: 'unknown-tag',
+        line: i + 1,
+        col: match.index + 1,
+        length: match[0].length,
+        message: `Non-standard tag found: <${tag}>`,
+        detail: `<${tag}> — Line ${i + 1}, Col ${match.index + 1}`
+      });
+    }
+  }
+  return issues;
+};
+
+window.RULES['tag-unwanted-attribute'] = function(parsed) {
+  const issues = [];
+  const lines = parsed.lines;
+
+  const NO_ATTR_TAGS = new Set([
+    'body','head','title','thead','tbody','tr','b'
+  ]);
+
+  // Matches opening tags (not self-closing, not closing)
+  const tagRe = /<([a-zA-Z][a-zA-Z0-9]*)(\s[^>]*)?>/g;
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    tagRe.lastIndex = 0;
+    let match;
+    while ((match = tagRe.exec(line)) !== null) {
+      const tag = match[1].toLowerCase();
+      const attrPart = match[2] ? match[2].trim() : '';
+      if (!NO_ATTR_TAGS.has(tag)) continue;
+      if (!attrPart) continue;
+      // Extract attribute names
+      const attrNames = [];
+      const attrRe = /([a-zA-Z_:][a-zA-Z0-9_:\-.]*)(?:\s*=\s*(?:"[^"]*"|'[^']*'|\S+))?/g;
+      let am;
+      while ((am = attrRe.exec(attrPart)) !== null) {
+        attrNames.push(am[1]);
+      }
+      if (attrNames.length === 0) continue;
+      issues.push({
+        ruleId: 'tag-unwanted-attribute',
+        line: i + 1,
+        col: match.index + 1,
+        length: match[0].length,
+        message: `<${tag}> should have no attributes — found: ${attrNames.join(', ')}`,
+        detail: match[0].slice(0, 80)
+      });
+    }
+  }
+
+  return issues;
+};
+
+window.RULES['thead-after-tbody'] = function(parsed) {
+  const issues = [];
+  const lines = parsed.lines;
+
+  // Find all table blocks and check tag order inside each
+  const raw = parsed.raw;
+  const tableRe = /<table[\s\S]*?<\/table>/gi;
+
+  let tableMatch;
+  while ((tableMatch = tableRe.exec(raw)) !== null) {
+    const tableContent = tableMatch[0];
+    const tableStart = tableMatch.index;
+
+    // Find positions of tbody, thead, th inside this table
+    const tbodyIdx = tableContent.search(/<tbody[\s>]/i);
+    if (tbodyIdx === -1) continue;
+
+    // Check for <thead> after <tbody>
+    const afterTbody = tableContent.slice(tbodyIdx);
+    const theadInAfter = /<thead[\s>]/i.exec(afterTbody);
+    if (theadInAfter) {
+      const absPos = tableStart + tbodyIdx + theadInAfter.index;
+      let lineNum = 1;
+      let count = 0;
+      for (let i = 0; i < raw.length && i < absPos; i++) {
+        if (raw[i] === '\n') count++;
+      }
+      lineNum = count + 1;
+      issues.push({
+        ruleId: 'thead-after-tbody',
+        line: lineNum,
+        col: 1,
+        length: 1,
+        message: '<thead> found after <tbody> in the same table',
+        detail: afterTbody.slice(theadInAfter.index, theadInAfter.index + 40)
+      });
+    }
+
+    // Check for <th> after <tbody>
+    const thInAfter = /<th[\s>]/i.exec(afterTbody);
+    if (thInAfter) {
+      const absPos = tableStart + tbodyIdx + thInAfter.index;
+      let count = 0;
+      for (let i = 0; i < raw.length && i < absPos; i++) {
+        if (raw[i] === '\n') count++;
+      }
+      issues.push({
+        ruleId: 'thead-after-tbody',
+        line: count + 1,
+        col: 1,
+        length: 1,
+        message: '<th> found after <tbody> in the same table',
+        detail: afterTbody.slice(thInAfter.index, thInAfter.index + 40)
+      });
+    }
+  }
+
+  return issues;
+};
+
+window.RULES['missing-css-class'] = function(parsed) {
+  const issues = [];
+  const lines = parsed.lines;
+  const css = window._cssFileContent || '';
+
+  if (!css) {
+    issues.push({
+      ruleId: 'missing-css-class',
+      line: 1,
+      col: 1,
+      length: 1,
+      message: 'No CSS file loaded — enable the rule and upload template.css',
+      detail: 'Upload CSS file'
+    });
+    return issues;
+  }
+
+  // Extract all unique class names from XHTML
+  const classMap = {};
+  const classRe = /class=["']([^"']+)["']/g;
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    classRe.lastIndex = 0;
+    let match;
+    while ((match = classRe.exec(line)) !== null) {
+      const classes = match[1].split(/\s+/);
+      classes.forEach(cls => {
+        if (cls && !classMap[cls]) {
+          classMap[cls] = i + 1;
+        }
+      });
+    }
+  }
+
+  // Check each class against CSS
+  Object.entries(classMap).forEach(([cls, lineNum]) => {
+    const pattern = new RegExp('\\.' + cls.replace(/[-[\]{}()*+?.,\\^$|#]/g, '\\$&') + '[\\s\\{,:#\\.\\[\\)>+~]');
+    if (!pattern.test(css)) {
+      issues.push({
+        ruleId: 'missing-css-class',
+        line: lineNum,
+        col: 1,
+        length: 1,
+        message: `Class "${cls}" not found in CSS`,
+        detail: cls
+      });
+    }
+  });
+
+  return issues;
+};
+
 window.runRule = function (ruleId, parsed, enabled) {
   const config = window.RULES_CONFIG.find(r => r.id === ruleId);
   if (!config || !enabled) return [];

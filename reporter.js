@@ -518,7 +518,13 @@ window.Reporter = {
           const { cleanLine, cleanCol } = this._stripTagsWithOffset(lineText, issue.col);
           const tr = document.createElement('tr');
 
-          if (issue.ruleId === 'italic-paren-start') {
+          if (issue.ruleId === 'unknown-tag' || issue.ruleId === 'tag-unwanted-attribute' || issue.ruleId === 'thead-after-tbody') {
+            tr.innerHTML = `
+              <td class="col-whats-wrong">${this._escape(issue.message)}</td>
+              <td class="col-where"><code>${this._escape(issue.detail.split(' — ')[0])}</code></td>
+              <td class="col-location">Line ${issue.line} · Col ${issue.col}</td>
+            `;
+          } else if (issue.ruleId === 'italic-paren-start') {
             tr.innerHTML = `
               <td class="col-whats-wrong">${this._escape(this._explainIssue(issue))}</td>
               <td class="col-where"><span class="snippet-text"><i>${this._escape(issue.detail)}</i></span></td>

@@ -15,6 +15,7 @@
 
   const els = {
     fileInput: document.getElementById('fileInput'),
+    cssFileInput: document.getElementById('cssFileInput'),
     fileName: document.getElementById('fileName'),
     uploadBox: document.getElementById('uploadBox'),
     fileDetailsArea: document.getElementById('fileDetailsArea'),
@@ -62,15 +63,17 @@
     });
 
     els.uploadBox.addEventListener('drop', (e) => {
-      const dt = e.dataTransfer;
-      const files = dt.files;
-      if (files && files.length > 0) {
-        processFile(files[0]);
-      }
+      const files = Array.from(e.dataTransfer.files || []);
+      const xhtmlFile = files.find(f => f.name.toLowerCase().endsWith('.xhtml'));
+      const cssFile = files.find(f => f.name.toLowerCase().endsWith('.css'));
+      if (cssFile) loadCssFile(cssFile);
+      if (xhtmlFile) processFile(xhtmlFile);
+      else if (files.length > 0) processFile(files[0]);
     });
 
     els.uploadBox.addEventListener('click', (e) => {
       if (e.target === els.fileInput || e.target.id === 'btnLoadSample') return;
+      if (e.target === els.cssFileInput || e.target.id === 'btnManualCss' || e.target.htmlFor === 'cssFileInput') return;
       els.fileInput.click();
     });
   }
@@ -127,11 +130,20 @@
       resetFileSelection();
     });
 
+    const cssRow = document.createElement('div');
+    cssRow.className = 'css-status-row';
+    cssRow.id = 'cssStatusRow';
+    cssRow.innerHTML = window._cssFileContent
+      ? `✅ CSS loaded: <strong>${window._cssFileName}</strong>`
+      : `⚠️ No CSS file detected — <label id="btnManualCss" class="btn btn-secondary btn-sm" for="cssFileInput" style="cursor:pointer;">Upload CSS</label>`;
+    els.fileName.appendChild(cssRow);
+
     if (els.btnToStep2) els.btnToStep2.disabled = false;
 
     // Read file for stats & code preview
     readFileAsText(file).then(text => {
       fileText = text;
+      window._lastLoadedFileContent = text;
       const lines = text.split(/\r?\n/);
       const lineCount = lines.length;
 
@@ -410,6 +422,15 @@
       });
 
       els.rulesList.appendChild(card);
+
+      if (rule.id === 'missing-css-class' && on) {
+        const cssRow = document.createElement('div');
+        cssRow.style.cssText = 'padding:6px 14px 10px;font-size:12px;color:var(--text-muted);grid-column: 1 / -1;';
+        cssRow.innerHTML = window._cssFileContent
+          ? `✅ CSS loaded: <strong style="color:var(--text-primary)">${window._cssFileName || 'template.css'}</strong>`
+          : '⚠️ No CSS file — go back to Step 1 to upload your CSS file alongside the XHTML.';
+        card.appendChild(cssRow);
+      }
     });
   }
 
@@ -472,12 +493,32 @@
     });
   }
 
+  function loadCssFile(file) {
+    const reader = new FileReader();
+    reader.onload = function(e) {
+      window._cssFileContent = e.target.result;
+      window._cssFileName = file.name;
+      updateCssBadge();
+    };
+    reader.readAsText(file);
+  }
+
+  function updateCssBadge() {
+    const row = document.getElementById('cssStatusRow');
+    if (row) {
+      row.innerHTML = window._cssFileContent
+        ? `✅ CSS loaded: <strong>${window._cssFileName}</strong>`
+        : `⚠️ No CSS file detected — <label id="btnManualCss" class="btn btn-secondary btn-sm" for="cssFileInput" style="cursor:pointer;">Upload CSS</label>`;
+    }
+  }
+
   async function handleValidate() {
     if (!selectedFile) return;
     els.btnToStep3.disabled = true;
     els.btnToStep3.textContent = 'Validating...';
     try {
       fileText = await readFileAsText(selectedFile);
+      window._lastLoadedFileContent = fileText;
       const report = window.Validator.run(fileText, ruleState);
       window.Reporter.render(report);
       hasValidated = true;
@@ -493,6 +534,14 @@
   }
 
   els.fileInput.addEventListener('change', handleFileSelect);
+
+  if (els.cssFileInput) {
+    els.cssFileInput.addEventListener('change', function() {
+      const cssFile = els.cssFileInput.files[0];
+      if (!cssFile) return;
+      loadCssFile(cssFile);
+    });
+  }
   els.btnToStep2.addEventListener('click', () => {
     renderCategoryTabs();
     renderRulesList();

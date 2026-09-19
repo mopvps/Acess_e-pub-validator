@@ -151,6 +151,38 @@ window.RULES_CONFIG = [
     enabled: true,
     severity: 'error',
     category: 'Structure'
+  },
+  {
+    id: 'unknown-tag',
+    name: 'Unknown Tag Check',
+    description: 'Warns when any HTML tag other than the approved list is found in the XHTML file.',
+    enabled: false,
+    severity: 'warn',
+    category: 'Structure'
+  },
+  {
+    id: 'tag-unwanted-attribute',
+    name: 'Unwanted Attribute Check',
+    description: 'Flags tags that should not carry any attributes but do.',
+    enabled: true,
+    severity: 'warn',
+    category: 'Structure'
+  },
+  {
+    id: 'thead-after-tbody',
+    name: 'THead/TH After TBody Check',
+    description: 'Flags <thead> or <th> tags that appear after a <tbody> tag in the same table.',
+    enabled: true,
+    severity: 'error',
+    category: 'Structure'
+  },
+  {
+    id: 'missing-css-class',
+    name: 'Missing CSS Class Check',
+    description: 'Flags class names used in the XHTML file that are not defined in the uploaded CSS file.',
+    enabled: true,
+    severity: 'error',
+    category: 'Structure'
   }
 ];
 

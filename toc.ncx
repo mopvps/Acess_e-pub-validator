@@ -1,0 +1,655 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" xmlns:ncx="http://www.daisy.org/z3986/2005/ncx/" version="2005-1" xml:lang="en">
+<head>
+<meta name="dtb:uid" content="urn:isbn:9781663008374"/>
+<meta name="dtb:depth" content="1"/>
+<meta name="dtb:totalPageCount" content="6"/>
+<meta name="dtb:maxPageNumber" content="6"/>
+</head>
+<docTitle>
+<text>i-Ready Classroom Mathematics, Grade 1 • Student Companion</text>
+</docTitle>
+<docAuthor>
+<text>Curriculum Associates</text>
+</docAuthor>
+<navMap>
+<navPoint id="a1" playOrder="1">
+<navLabel>
+<text>Cover</text>
+</navLabel>
+<content src="xhtml/Cover.xhtml"/>
+</navPoint>
+<navPoint id="a2" playOrder="2">
+<navLabel>
+<text>Title Page</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_TITLE.xhtml"/>
+</navPoint>
+<navPoint id="a3" playOrder="3">
+<navLabel>
+<text>Copyright</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_TITLE.xhtml#cpy"/>
+</navPoint>
+<navPoint id="a4" playOrder="4">
+<navLabel>
+<text>Contents</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_TOC.xhtml"/>
+</navPoint>
+<navPoint id="a5" playOrder="5">
+<navLabel>
+<text>One-Day Activity: Compose and Decompose Numbers</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L01_S01.xhtml"/>
+<navPoint id="a6" playOrder="6">
+<navLabel>
+<text>Develop</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L01_S01.xhtml#les1"/>
+</navPoint>
+<navPoint id="a7" playOrder="7">
+<navLabel>
+<text>Practice</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L01_S02.xhtml#les1_1"/>
+</navPoint>
+</navPoint>
+<navPoint id="a8" playOrder="8">
+<navLabel>
+<text>One-Day Activity: Skip Count by Fives and Tens</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L02_S01.xhtml"/>
+<navPoint id="a9" playOrder="9">
+<navLabel>
+<text>Develop</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L02_S01.xhtml#les2"/>
+</navPoint>
+<navPoint id="a10" playOrder="10">
+<navLabel>
+<text>Practice</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L02_S02.xhtml#les2_1"/>
+</navPoint>
+</navPoint>
+<navPoint id="a11" playOrder="11">
+<navLabel>
+<text>Multi-Day Activity: Identify and Compare Shapes</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S01.xhtml"/>
+<navPoint id="a12" playOrder="12">
+<navLabel>
+<text>Session 1: Explore</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S01.xhtml#les3"/>
+</navPoint>
+<navPoint id="a13" playOrder="13">
+<navLabel>
+<text>Session 2: Develop</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S02.xhtml#les3_1"/>
+</navPoint>
+<navPoint id="a14" playOrder="14">
+<navLabel>
+<text>Practice</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S03.xhtml#les3_2"/>
+</navPoint>
+<navPoint id="a15" playOrder="15">
+<navLabel>
+<text>Session 3: Develop</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S04.xhtml#les3_3"/>
+</navPoint>
+<navPoint id="a16" playOrder="16">
+<navLabel>
+<text>Practice</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S05.xhtml#les3_4"/>
+</navPoint>
+<navPoint id="a17" playOrder="17">
+<navLabel>
+<text>Session 4: Refine</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S06.xhtml#les3_5"/>
+</navPoint>
+<navPoint id="a18" playOrder="18">
+<navLabel>
+<text>Practice</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S07.xhtml#les3_6"/>
+</navPoint>
+<navPoint id="a19" playOrder="19">
+<navLabel>
+<text>Session 5: Refine</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S08.xhtml#les3_7"/>
+</navPoint>
+<navPoint id="a20" playOrder="20">
+<navLabel>
+<text>Practice</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S09.xhtml#les3_8"/>
+</navPoint>
+</navPoint>
+<navPoint id="a21" playOrder="21">
+<navLabel>
+<text>One-Day Activity: Describe, Extend, and Make Growing Patterns</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L04_S01.xhtml"/>
+<navPoint id="a22" playOrder="22">
+<navLabel>
+<text>Develop</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L04_S01.xhtml#les4"/>
+</navPoint>
+<navPoint id="a23" playOrder="23">
+<navLabel>
+<text>Practice</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L04_S02.xhtml#les4_1"/>
+</navPoint>
+</navPoint>
+<navPoint id="a24" playOrder="24">
+<navLabel>
+<text>One-Day Activity: Describe, Extend, and Make Repeating Patterns</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L05_S01.xhtml"/>
+<navPoint id="a25" playOrder="25">
+<navLabel>
+<text>Develop</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L05_S01.xhtml#les5"/>
+</navPoint>
+<navPoint id="a26" playOrder="26">
+<navLabel>
+<text>Practice</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L05_S02.xhtml#les5_1"/>
+</navPoint>
+</navPoint>
+<navPoint id="a27" playOrder="27">
+<navLabel>
+<text>Multi-Day Activity: Identify and Count Money</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S01.xhtml"/>
+<navPoint id="a28" playOrder="28">
+<navLabel>
+<text>Session 1: Explore</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S01.xhtml#les6"/>
+</navPoint>
+<navPoint id="a29" playOrder="29">
+<navLabel>
+<text>Session 2: Develop</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S02.xhtml#les6_2"/>
+</navPoint>
+<navPoint id="a30" playOrder="30">
+<navLabel>
+<text>Practice</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S03.xhtml#les6_3"/>
+</navPoint>
+<navPoint id="a31" playOrder="31">
+<navLabel>
+<text>Session 3: Develop</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S04.xhtml#les6_4"/>
+</navPoint>
+<navPoint id="a32" playOrder="32">
+<navLabel>
+<text>Practice</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S05.xhtml#les6_5"/>
+</navPoint>
+<navPoint id="a33" playOrder="33">
+<navLabel>
+<text>Session 4: Refine</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S06.xhtml#les6_6"/>
+</navPoint>
+<navPoint id="a34" playOrder="34">
+<navLabel>
+<text>Practice</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S07.xhtml#les6_7"/>
+</navPoint>
+<navPoint id="a35" playOrder="35">
+<navLabel>
+<text>Session 5: Refine</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S08.xhtml#les6_8"/>
+</navPoint>
+<navPoint id="a36" playOrder="36">
+<navLabel>
+<text>Practice</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S09.xhtml#les6_9"/>
+</navPoint>
+</navPoint>
+</navMap>
+<pageList>
+<pageTarget id="a37" type="normal" playOrder="37" value="i">
+<navLabel>
+<text>i</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_TOC.xhtml#page_i"/>
+</pageTarget>
+<pageTarget id="a38" type="normal" playOrder="38" value="ii">
+<navLabel>
+<text>ii</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_TOC.xhtml#page_ii"/>
+</pageTarget>
+<pageTarget id="a39" type="normal" playOrder="39" value="SC 1">
+<navLabel>
+<text>SC 1</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L01_S01.xhtml#pageSC1"/>
+</pageTarget>
+<pageTarget id="a40" type="normal" playOrder="40" value="SC 2">
+<navLabel>
+<text>SC 2</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L01_S01.xhtml#pageSC2"/>
+</pageTarget>
+<pageTarget id="a41" type="normal" playOrder="41" value="SC 3">
+<navLabel>
+<text>SC 3</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L01_S01.xhtml#pageSC3"/>
+</pageTarget>
+<pageTarget id="a42" type="normal" playOrder="42" value="SC 4">
+<navLabel>
+<text>SC 4</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L01_S01.xhtml#pageSC4"/>
+</pageTarget>
+<pageTarget id="a43" type="normal" playOrder="43" value="SC 5">
+<navLabel>
+<text>SC 5</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L01_S02.xhtml#pageSC5"/>
+</pageTarget>
+<pageTarget id="a44" type="normal" playOrder="44" value="SC 6">
+<navLabel>
+<text>SC 6</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L01_S02.xhtml#pageSC6"/>
+</pageTarget>
+<pageTarget id="a45" type="normal" playOrder="45" value="SC 7">
+<navLabel>
+<text>SC 7</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L02_S01.xhtml#pageSC7"/>
+</pageTarget>
+<pageTarget id="a46" type="normal" playOrder="46" value="SC 8">
+<navLabel>
+<text>SC 8</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L02_S01.xhtml#pageSC8"/>
+</pageTarget>
+<pageTarget id="a47" type="normal" playOrder="47" value="SC 9">
+<navLabel>
+<text>SC 9</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L02_S01.xhtml#pageSC9"/>
+</pageTarget>
+<pageTarget id="a48" type="normal" playOrder="48" value="SC 10">
+<navLabel>
+<text>SC 10</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L02_S01.xhtml#pageSC10"/>
+</pageTarget>
+<pageTarget id="a49" type="normal" playOrder="49" value="SC 11">
+<navLabel>
+<text>SC 11</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L02_S02.xhtml#pageSC11"/>
+</pageTarget>
+<pageTarget id="a50" type="normal" playOrder="50" value="SC 12">
+<navLabel>
+<text>SC 12</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U04_L02_S02.xhtml#pageSC12"/>
+</pageTarget>
+<pageTarget id="a51" type="normal" playOrder="51" value="SC 13">
+<navLabel>
+<text>SC 13</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S01.xhtml#pageSC13"/>
+</pageTarget>
+<pageTarget id="a52" type="normal" playOrder="52" value="SC 14">
+<navLabel>
+<text>SC 14</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S01.xhtml#pageSC14"/>
+</pageTarget>
+<pageTarget id="a53" type="normal" playOrder="53" value="SC 15">
+<navLabel>
+<text>SC 15</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S02.xhtml#pageSC15"/>
+</pageTarget>
+<pageTarget id="a54" type="normal" playOrder="54" value="SC 16">
+<navLabel>
+<text>SC 16</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S02.xhtml#pageSC16"/>
+</pageTarget>
+<pageTarget id="a55" type="normal" playOrder="55" value="SC 17">
+<navLabel>
+<text>SC 17</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S02.xhtml#pageSC17"/>
+</pageTarget>
+<pageTarget id="a56" type="normal" playOrder="56" value="SC 18">
+<navLabel>
+<text>SC 18</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S02.xhtml#pageSC18"/>
+</pageTarget>
+<pageTarget id="a57" type="normal" playOrder="57" value="SC 19">
+<navLabel>
+<text>SC 19</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S03.xhtml#pageSC19"/>
+</pageTarget>
+<pageTarget id="a58" type="normal" playOrder="58" value="SC 20">
+<navLabel>
+<text>SC 20</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S03.xhtml#pageSC20"/>
+</pageTarget>
+<pageTarget id="a59" type="normal" playOrder="59" value="SC 21">
+<navLabel>
+<text>SC 21</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S04.xhtml#pageSC21"/>
+</pageTarget>
+<pageTarget id="a60" type="normal" playOrder="60" value="SC 22">
+<navLabel>
+<text>SC 22</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S04.xhtml#pageSC22"/>
+</pageTarget>
+<pageTarget id="a61" type="normal" playOrder="61" value="SC 23">
+<navLabel>
+<text>SC 23</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S04.xhtml#pageSC23"/>
+</pageTarget>
+<pageTarget id="a62" type="normal" playOrder="62" value="SC 24">
+<navLabel>
+<text>SC 24</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S04.xhtml#pageSC24"/>
+</pageTarget>
+<pageTarget id="a63" type="normal" playOrder="63" value="SC 25">
+<navLabel>
+<text>SC 25</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S05.xhtml#pageSC25"/>
+</pageTarget>
+<pageTarget id="a64" type="normal" playOrder="64" value="SC 26">
+<navLabel>
+<text>SC 26</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S05.xhtml#pageSC26"/>
+</pageTarget>
+<pageTarget id="a65" type="normal" playOrder="65" value="SC 27">
+<navLabel>
+<text>SC 27</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S06.xhtml#pageSC27"/>
+</pageTarget>
+<pageTarget id="a66" type="normal" playOrder="66" value="SC 28">
+<navLabel>
+<text>SC 28</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S06.xhtml#pageSC28"/>
+</pageTarget>
+<pageTarget id="a67" type="normal" playOrder="67" value="SC 29">
+<navLabel>
+<text>SC 29</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S07.xhtml#pageSC29"/>
+</pageTarget>
+<pageTarget id="a68" type="normal" playOrder="68" value="SC 30">
+<navLabel>
+<text>SC 30</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S07.xhtml#pageSC30"/>
+</pageTarget>
+<pageTarget id="a69" type="normal" playOrder="69" value="SC 31">
+<navLabel>
+<text>SC 31</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S08.xhtml#pageSC31"/>
+</pageTarget>
+<pageTarget id="a70" type="normal" playOrder="70" value="SC 32">
+<navLabel>
+<text>SC 32</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S08.xhtml#pageSC32"/>
+</pageTarget>
+<pageTarget id="a71" type="normal" playOrder="71" value="SC 33">
+<navLabel>
+<text>SC 33</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S09.xhtml#pageSC33"/>
+</pageTarget>
+<pageTarget id="a72" type="normal" playOrder="72" value="SC 34">
+<navLabel>
+<text>SC 34</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L03_S09.xhtml#pageSC34"/>
+</pageTarget>
+<pageTarget id="a73" type="normal" playOrder="73" value="SC 35">
+<navLabel>
+<text>SC 35</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L04_S01.xhtml#pageSC35"/>
+</pageTarget>
+<pageTarget id="a74" type="normal" playOrder="74" value="SC 36">
+<navLabel>
+<text>SC 36</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L04_S01.xhtml#pageSC36"/>
+</pageTarget>
+<pageTarget id="a75" type="normal" playOrder="75" value="SC 37">
+<navLabel>
+<text>SC 37</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L04_S01.xhtml#pageSC37"/>
+</pageTarget>
+<pageTarget id="a76" type="normal" playOrder="76" value="SC 38">
+<navLabel>
+<text>SC 38</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L04_S01.xhtml#pageSC38"/>
+</pageTarget>
+<pageTarget id="a77" type="normal" playOrder="77" value="SC 39">
+<navLabel>
+<text>SC 39</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L04_S02.xhtml#pageSC39"/>
+</pageTarget>
+<pageTarget id="a78" type="normal" playOrder="78" value="SC 40">
+<navLabel>
+<text>SC 40</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L04_S02.xhtml#pageSC40"/>
+</pageTarget>
+<pageTarget id="a79" type="normal" playOrder="79" value="SC 41">
+<navLabel>
+<text>SC 41</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L05_S01.xhtml#pageSC41"/>
+</pageTarget>
+<pageTarget id="a80" type="normal" playOrder="80" value="SC 42">
+<navLabel>
+<text>SC 42</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L05_S01.xhtml#pageSC42"/>
+</pageTarget>
+<pageTarget id="a81" type="normal" playOrder="81" value="SC 43">
+<navLabel>
+<text>SC 43</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L05_S01.xhtml#pageSC43"/>
+</pageTarget>
+<pageTarget id="a82" type="normal" playOrder="82" value="SC 44">
+<navLabel>
+<text>SC 44</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L05_S01.xhtml#pageSC44"/>
+</pageTarget>
+<pageTarget id="a83" type="normal" playOrder="83" value="SC 45">
+<navLabel>
+<text>SC 45</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L05_S02.xhtml#pageSC45"/>
+</pageTarget>
+<pageTarget id="a84" type="normal" playOrder="84" value="SC 46">
+<navLabel>
+<text>SC 46</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L05_S02.xhtml#pageSC46"/>
+</pageTarget>
+<pageTarget id="a85" type="normal" playOrder="85" value="SC 47">
+<navLabel>
+<text>SC 47</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S01.xhtml#pageSC47"/>
+</pageTarget>
+<pageTarget id="a86" type="normal" playOrder="86" value="SC 48">
+<navLabel>
+<text>SC 48</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S01.xhtml#pageSC48"/>
+</pageTarget>
+<pageTarget id="a87" type="normal" playOrder="87" value="SC 49">
+<navLabel>
+<text>SC 49</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S02.xhtml#pageSC49"/>
+</pageTarget>
+<pageTarget id="a88" type="normal" playOrder="88" value="SC 50">
+<navLabel>
+<text>SC 50</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S02.xhtml#pageSC50"/>
+</pageTarget>
+<pageTarget id="a89" type="normal" playOrder="89" value="SC 51">
+<navLabel>
+<text>SC 51</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S02.xhtml#pageSC51"/>
+</pageTarget>
+<pageTarget id="a90" type="normal" playOrder="90" value="SC 52">
+<navLabel>
+<text>SC 52</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S02.xhtml#pageSC52"/>
+</pageTarget>
+<pageTarget id="a91" type="normal" playOrder="91" value="SC 53">
+<navLabel>
+<text>SC 53</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S03.xhtml#pageSC53"/>
+</pageTarget>
+<pageTarget id="a92" type="normal" playOrder="92" value="SC 54">
+<navLabel>
+<text>SC 54</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S03.xhtml#pageSC54"/>
+</pageTarget>
+<pageTarget id="a93" type="normal" playOrder="93" value="SC 55">
+<navLabel>
+<text>SC 55</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S04.xhtml#pageSC55"/>
+</pageTarget>
+<pageTarget id="a94" type="normal" playOrder="94" value="SC 56">
+<navLabel>
+<text>SC 56</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S04.xhtml#pageSC56"/>
+</pageTarget>
+<pageTarget id="a95" type="normal" playOrder="95" value="SC 57">
+<navLabel>
+<text>SC 57</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S04.xhtml#pageSC57"/>
+</pageTarget>
+<pageTarget id="a96" type="normal" playOrder="96" value="SC 58">
+<navLabel>
+<text>SC 58</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S04.xhtml#pageSC58"/>
+</pageTarget>
+<pageTarget id="a97" type="normal" playOrder="97" value="SC 59">
+<navLabel>
+<text>SC 59</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S05.xhtml#pageSC59"/>
+</pageTarget>
+<pageTarget id="a98" type="normal" playOrder="98" value="SC 60">
+<navLabel>
+<text>SC 60</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S05.xhtml#pageSC60"/>
+</pageTarget>
+<pageTarget id="a99" type="normal" playOrder="99" value="SC 61">
+<navLabel>
+<text>SC 61</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S06.xhtml#pageSC61"/>
+</pageTarget>
+<pageTarget id="a100" type="normal" playOrder="100" value="SC 62">
+<navLabel>
+<text>SC 62</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S06.xhtml#pageSC62"/>
+</pageTarget>
+<pageTarget id="a101" type="normal" playOrder="101" value="SC 63">
+<navLabel>
+<text>SC 63</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S07.xhtml#pageSC63"/>
+</pageTarget>
+<pageTarget id="a102" type="normal" playOrder="102" value="SC 64">
+<navLabel>
+<text>SC 64</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S07.xhtml#pageSC64"/>
+</pageTarget>
+<pageTarget id="a103" type="normal" playOrder="103" value="SC 65">
+<navLabel>
+<text>SC 65</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S08.xhtml#pageSC65"/>
+</pageTarget>
+<pageTarget id="a104" type="normal" playOrder="104" value="SC 66">
+<navLabel>
+<text>SC 66</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S08.xhtml#pageSC66"/>
+</pageTarget>
+<pageTarget id="a105" type="normal" playOrder="105" value="SC 67">
+<navLabel>
+<text>SC 67</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S09.xhtml#pageSC67"/>
+</pageTarget>
+<pageTarget id="a106" type="normal" playOrder="106" value="SC 68">
+<navLabel>
+<text>SC 68</text>
+</navLabel>
+<content src="xhtml/iRCM1_EN_EN_U06_L06_S09.xhtml#pageSC68"/>
+</pageTarget>
+</pageList>
+</ncx>

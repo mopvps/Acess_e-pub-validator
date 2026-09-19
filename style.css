@@ -1,3 +1,16 @@
+.css-status-row {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 :root {
   --accent: #2B3A9C;
   --accent-hover: #1F2C7A;
@@ -1086,12 +1099,17 @@ body {
   font-weight: 700;
   color: var(--text);
   flex-shrink: 0;
-  min-width: 200px;
-  max-width: 40%;
+  width: 320px;
+  min-width: 320px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .group-center {
-  flex: 1;
+  width: 160px;
+  min-width: 160px;
+  flex-shrink: 0;
   display: flex;
   justify-content: center;
 }
@@ -1280,4 +1298,193 @@ body {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--r-card);
+}
+
+/* ── Compare Tool ── */
+.compare-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+#compareFileType {
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: var(--r-btn);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  cursor: pointer;
+  min-width: 160px;
+}
+
+.compare-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.compare-modal {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-card);
+  width: 92vw;
+  max-width: 1200px;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+.compare-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.compare-modal-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.compare-close-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: var(--text-muted);
+  line-height: 1;
+}
+
+.compare-close-btn:hover { color: var(--fail); }
+
+.compare-modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.compare-pane {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.compare-pane:last-child { border-right: none; }
+
+.compare-pane-label {
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.compare-textarea {
+  flex: 1;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.7;
+  background: var(--surface);
+  color: var(--text);
+}
+
+.compare-diff-output {
+  flex: 1;
+  overflow-y: auto;
+  padding: 14px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.diff-line-added {
+  background: var(--pass-soft);
+  color: var(--pass);
+  display: block;
+  padding: 0 6px;
+  border-radius: 3px;
+  margin-bottom: 1px;
+}
+
+.diff-line-removed {
+  background: var(--fail-soft);
+  color: var(--fail);
+  display: block;
+  padding: 0 6px;
+  border-radius: 3px;
+  margin-bottom: 1px;
+}
+
+.diff-line-same {
+  display: block;
+  color: var(--text-muted);
+  padding: 0 6px;
+  margin-bottom: 1px;
+}
+
+.diff-empty-state {
+  color: var(--text-muted);
+  font-size: 13px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.compare-modal-footer {
+  display: flex;
+  gap: 10px;
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  background: var(--bg);
+  justify-content: flex-end;
+}
+
+/* ── Compare Home Section ── */
+.compare-home-section {
+  margin: 2rem 0 0;
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-card);
+}
+
+.compare-home-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.compare-home-desc {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.compare-home-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

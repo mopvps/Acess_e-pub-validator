@@ -74,6 +74,7 @@
           <div class="upload-text-sub">Supported format: <code>.xhtml</code> · Recommended size: &lt; 300KB</div>
         </label>
         <input type="file" id="fileInput" accept=".xhtml" hidden />
+        <input type="file" id="cssFileInput" accept=".css" style="display:none;" />
 
       </div>
 
@@ -138,6 +139,21 @@
       <div id="recentFilesWrap" class="recent-files-wrap" style="display:none;">
         <div class="recent-files-title">🕒 Recently Uploaded Files</div>
         <div id="recentFilesList" class="recent-files-list"></div>
+      </div>
+
+      <!-- Compare Tool Section -->
+      <div class="compare-home-section">
+        <div class="compare-home-title">⇄ Compare EPUB Files</div>
+        <div class="compare-home-desc">Select a file type, paste your content, and compare it against the reference.</div>
+        <div class="compare-home-toolbar">
+          <select id="compareFileType" class="btn btn-secondary">
+            <option value="">— Select File Type —</option>
+            <option value="opf">content.opf</option>
+            <option value="ncx">toc.ncx</option>
+            <option value="nav">nav.xhtml</option>
+          </select>
+          <button id="btnOpenCompare" class="btn btn-primary">⇄ Compare</button>
+        </div>
       </div>
     </section>
 
@@ -233,6 +249,30 @@
   </main>
 </div>
 
+<!-- Compare Modal -->
+<div id="compareModal" class="compare-modal-overlay" style="display:none;">
+  <div class="compare-modal">
+    <div class="compare-modal-header">
+      <span class="compare-modal-title" id="compareModalTitle">Compare File</span>
+      <button id="btnCloseCompare" class="compare-close-btn">&times;</button>
+    </div>
+    <div class="compare-modal-body">
+      <div class="compare-pane">
+        <div class="compare-pane-label">📋 Paste your file content here</div>
+        <textarea id="compareInput" class="compare-textarea" placeholder="Paste the full file content here..."></textarea>
+      </div>
+      <div class="compare-pane">
+        <div class="compare-pane-label">🔍 Differences</div>
+        <div id="compareDiffOutput" class="compare-diff-output"></div>
+      </div>
+    </div>
+    <div class="compare-modal-footer">
+      <button id="btnRunCompare" class="btn btn-primary">Run Compare</button>
+      <button id="btnClearCompare" class="btn btn-secondary">Clear</button>
+    </div>
+  </div>
+</div>
+
 <script>
 window.ENTITY_MAP = null;
 fetch('entities.json')
@@ -258,5 +298,6 @@ fetch('entities.json')
 <script src="validator.js"></script>
 <script src="reporter.js"></script>
 <script src="app.js"></script>
+<script src="compare.js"></script>
 </body>
 </html>
